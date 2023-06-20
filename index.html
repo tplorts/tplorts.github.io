@@ -1,1 +1,44 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Tedst</title>
+  </head>
+  <body>
+    <svg xmlns="http://www.w3.org/2000/svg" style="height: 0">
+      <defs>
+        <pattern id="star" viewBox="0,0,10,10" width="10%" height="10%">
+          <polygon points="0,0 2,5 0,10 5,8 10,10 8,5 10,0 5,2" />
+        </pattern>
+
+        <linearGradient id="Gradient1">
+          <stop offset="5%" stop-color="white" />
+          <stop offset="95%" stop-color="blue" />
+        </linearGradient>
+        <linearGradient id="Gradient2" x1="0" x2="0" y1="0" y2="1">
+          <stop offset="5%" stop-color="red" />
+          <stop offset="95%" stop-color="orange" />
+        </linearGradient>
+
+        <pattern id="Pattern" x="0" y="0" width=".25" height=".25">
+          <rect x="0" y="0" width="50" height="50" fill="skyblue" />
+          <rect x="0" y="0" width="25" height="25" fill="url(#Gradient2)" />
+          <circle cx="25" cy="25" r="20" fill="url(#Gradient1)" fill-opacity="0.5" />
+        </pattern>
+      </defs>
+    </svg>
+
+    <div>
+      <svg viewBox="0 0 230 100" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="50" cy="50" r="50" fill="url(#star)" />
+        <circle cx="180" cy="50" r="40" fill="none" stroke-width="20" stroke="url(#star)" />
+      </svg>
+    </div>
+
+    <div>
+      <svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+        <rect fill="url(#Pattern)" stroke="black" width="200" height="200" />
+      </svg>
+    </div>
+  </body>
+</html>
